@@ -1,0 +1,30 @@
+.highlights-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.badges-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.highlight-badge {
+    padding: 20px 40px;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    border-radius: 50px;
+    cursor: default;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.highlight-badge:hover {
+    background: rgba(0, 243, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+    text-shadow: 0 0 10px var(--accent-neon);
+}

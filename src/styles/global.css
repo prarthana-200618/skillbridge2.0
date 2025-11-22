@@ -1,0 +1,95 @@
+:root {
+  /* Dark Blue–Purple Glow */
+  --color-glow-1-top: #616083;
+  --color-glow-1-bottom: #0C0E1D;
+
+  /* Deep Purple–Lavender Glow */
+  --color-glow-2-top: #211F36;
+  --color-glow-2-bottom: #AB7DE3;
+
+  /* Neon Pink–Magenta Glow */
+  --color-glow-3-top: #FF81FF;
+  --color-glow-3-bottom: #AB7DE3;
+
+  /* Green–Teal Glow */
+  --color-glow-4-top: #51FAAA;
+  --color-glow-4-bottom: #0C0E1D;
+
+  /* New Phase 2 Colors */
+  --neon-magenta: #7d1959;
+  --neon-red-pink: #ec2a3b;
+  --neon-blue: #00f3ff;
+  --neon-purple: #bd00ff;
+
+  /* Base Colors */
+  --bg-dark: #050505;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --accent-neon: #00f3ff;
+
+  /* Fonts */
+  --font-heading: 'DM Serif Display', serif;
+  --font-body: 'Space Grotesk', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Utility classes for glows */
+.glow-text {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px var(--accent-neon);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+/* 3D & Magnetic Utilities */
+.hover-3d {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover-3d:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.02);
+}
+
+.magnetic-btn {
+  position: relative;
+  overflow: hidden;
+}
