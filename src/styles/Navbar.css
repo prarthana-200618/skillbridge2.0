@@ -7,7 +7,7 @@
     z-index: 1000;
     transition: all 0.3s ease;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .navbar.scrolled {
@@ -40,6 +40,7 @@
     align-items: center;
     width: 100%;
     max-width: 1200px;
+    margin-left: 0;
 }
 
 .logo-text {
@@ -50,11 +51,11 @@
 }
 
 .logo-highlight {
-    background: linear-gradient(45deg, var(--neon-magenta), #AB7DE3);
+    background: linear-gradient(45deg, var(--accent-neon), #00d4ff);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 15px rgba(189, 0, 255, 0.5);
+    text-shadow: 0 0 15px rgba(0, 243, 255, 0.6);
     font-weight: bold;
     position: relative;
 }

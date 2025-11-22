@@ -19,11 +19,11 @@
 }
 
 .hero-highlight {
-    background: linear-gradient(45deg, var(--neon-magenta), #AB7DE3);
+    background: linear-gradient(45deg, var(--accent-neon), #00d4ff);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px rgba(189, 0, 255, 0.6);
+    text-shadow: 0 0 30px rgba(0, 243, 255, 0.6);
     position: relative;
     display: inline-block;
     animation: pulseGlow 3s infinite alternate;
@@ -31,11 +31,11 @@
 
 @keyframes pulseGlow {
     0% {
-        filter: drop-shadow(0 0 10px rgba(189, 0, 255, 0.4));
+        filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.4));
     }
 
     100% {
-        filter: drop-shadow(0 0 25px rgba(189, 0, 255, 0.8));
+        filter: drop-shadow(0 0 25px rgba(0, 243, 255, 0.8));
     }
 }
 

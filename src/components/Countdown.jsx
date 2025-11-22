@@ -43,10 +43,10 @@ const Countdown = () => {
 
     return (
         <div className="countdown-container">
-            <CountdownCard value={timeLeft.days} label="DAYS" color="var(--neon-magenta)" />
-            <CountdownCard value={timeLeft.hours} label="HOURS" color="#AB7DE3" />
-            <CountdownCard value={timeLeft.minutes} label="MINUTES" color="var(--neon-blue)" />
-            <CountdownCard value={timeLeft.seconds} label="SECONDS" color="var(--neon-purple)" />
+            <CountdownCard value={timeLeft.days} label="DAYS" color="#FFFFFF" />
+            <CountdownCard value={timeLeft.hours} label="HOURS" color="#FFFFFF" />
+            <CountdownCard value={timeLeft.minutes} label="MINUTES" color="#FFFFFF" />
+            <CountdownCard value={timeLeft.seconds} label="SECONDS" color="#FFFFFF" />
         </div>
     );
 };
