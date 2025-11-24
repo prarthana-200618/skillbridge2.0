@@ -1,87 +1,54 @@
 .cta-section {
     padding: 80px 20px;
     text-align: center;
-}
-
-.cta-frame {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 60px;
     position: relative;
-    overflow: hidden;
-    border: 1px solid var(--neon-red-pink);
+    z-index: 1;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    background: linear-gradient(135deg, rgba(28, 37, 65, 0.3), rgba(10, 17, 40, 0.5));
 }
 
-.urgency-pulse {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(236, 42, 59, 0.1) 0%, transparent 70%);
-    animation: pulseRed 2s infinite;
-    pointer-events: none;
-}
-
-@keyframes pulseRed {
-    0% {
-        opacity: 0.5;
-        transform: scale(0.95);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.05);
-    }
-
-    100% {
-        opacity: 0.5;
-        transform: scale(0.95);
-    }
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .cta-heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
     color: var(--text-primary);
-    margin-bottom: 10px;
-    text-shadow: 0 0 20px var(--neon-red-pink);
-    position: relative;
-    z-index: 1;
+    text-shadow: 0 0 15px rgba(248, 249, 250, 0.1);
 }
 
-.cta-sub {
+.cta-subtext {
     font-family: var(--font-body);
-    color: var(--text-secondary);
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    position: relative;
-    z-index: 1;
-}
-
-.mini-countdown {
-    font-family: 'Courier New', monospace;
-    color: var(--accent-neon);
     font-size: 1.1rem;
+    color: var(--text-secondary);
     margin-bottom: 40px;
-    letter-spacing: 1px;
-    position: relative;
-    z-index: 1;
+    line-height: 1.6;
 }
 
-.apply-btn {
-    padding: 15px 50px;
-    background: var(--neon-red-pink);
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
+.cta-btn {
+    padding: 18px 50px;
+    background: var(--accent-primary);
+    color: var(--bg-dark);
+    border: none;
     border-radius: 50px;
-    position: relative;
-    z-index: 1;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 0 20px rgba(236, 42, 59, 0.5);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
 }
 
-.apply-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 40px rgba(236, 42, 59, 0.8);
+.cta-btn:hover {
+    background: var(--accent-secondary);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .cta-heading {
+        font-size: 2rem;
+    }
 }

@@ -1,31 +1,30 @@
 :root {
-  /* Dark Blue–Purple Glow */
-  --color-glow-1-top: #616083;
-  --color-glow-1-bottom: #0C0E1D;
+  /* Classy Navy & Gold Palette */
+  --bg-dark: #0A1128;
+  --bg-surface: #1C2541;
+  --bg-elevated: #2D3E5F;
 
-  /* Deep Purple–Lavender Glow */
-  --color-glow-2-top: #211F36;
-  --color-glow-2-bottom: #AB7DE3;
+  /* Gold Accents */
+  --accent-primary: #D4AF37;
+  --accent-secondary: #C9A961;
+  --accent-muted: #B8A068;
 
-  /* Neon Pink–Magenta Glow */
-  --color-glow-3-top: #FF81FF;
-  --color-glow-3-bottom: #AB7DE3;
+  /* Text Colors */
+  --text-primary: #F8F9FA;
+  --text-secondary: #B8C5D6;
+  --text-muted: #8A9BAE;
 
-  /* Green–Teal Glow */
-  --color-glow-4-top: #51FAAA;
-  --color-glow-4-bottom: #0C0E1D;
+  /* Supporting Colors */
+  --success: #4A7C59;
+  --border-color: rgba(212, 175, 55, 0.2);
+  --border-hover: rgba(212, 175, 55, 0.4);
 
-  /* New Phase 2 Colors */
-  --neon-magenta: #7d1959;
-  --neon-red-pink: #ec2a3b;
-  --neon-blue: #00f3ff;
-  --neon-purple: #bd00ff;
-
-  /* Base Colors */
-  --bg-dark: #050505;
-  --text-primary: #ffffff;
-  --text-secondary: #a0a0a0;
-  --accent-neon: #00f3ff;
+  /* Legacy compatibility - map old vars to new */
+  --accent-neon: #D4AF37;
+  --neon-magenta: #D4AF37;
+  --neon-blue: #C9A961;
+  --neon-purple: #B8A068;
+  --neon-red-pink: #D4AF37;
 
   /* Fonts */
   --font-heading: 'DM Serif Display', serif;
@@ -68,25 +67,24 @@ button {
   outline: none;
 }
 
-/* Utility classes for glows */
+/* Utility classes */
 .glow-text {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px var(--accent-neon);
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.3), 0 0 15px rgba(212, 175, 55, 0.2);
 }
 
 .glass-panel {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(28, 37, 65, 0.6);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
 }
 
-/* 3D & Magnetic Utilities */
 .hover-3d {
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .hover-3d:hover {
-  transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.02);
+  transform: perspective(1000px) rotateX(2deg) rotateY(2deg) scale(1.01);
 }
 
 .magnetic-btn {

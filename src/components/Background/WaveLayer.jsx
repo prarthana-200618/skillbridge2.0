@@ -20,26 +20,25 @@ const WaveLayer = () => {
         const wave = {
             y: canvas.height / 2,
             length: 0.01,
-            amplitude: 100,
-            frequency: 0.01
+            amplitude: 40, // Reduced from 100
+            frequency: 0.005 // Slower
         };
 
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             increment += wave.frequency;
 
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < 3; i++) { // Reduced from 5 waves
                 ctx.beginPath();
                 ctx.moveTo(0, canvas.height / 2);
 
                 for (let x = 0; x < canvas.width; x++) {
-                    // Sine wave formula with offset for each line
-                    const y = canvas.height / 2 + Math.sin(x * wave.length + increment + i) * (wave.amplitude + i * 20) * Math.sin(increment);
+                    const y = canvas.height / 2 + Math.sin(x * wave.length + increment + i) * (wave.amplitude + i * 10) * Math.sin(increment);
                     ctx.lineTo(x, y);
                 }
 
-                ctx.strokeStyle = `rgba(0, 243, 255, ${0.1 - i * 0.01})`; // Neon blue fading
-                ctx.lineWidth = 2;
+                ctx.strokeStyle = `rgba(212, 175, 55, ${0.05 - i * 0.01})`; // Subtle gold
+                ctx.lineWidth = 1.5;
                 ctx.stroke();
             }
 

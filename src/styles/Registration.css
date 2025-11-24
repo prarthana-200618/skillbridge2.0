@@ -16,7 +16,7 @@
     width: 300px;
     position: relative;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
 }
 
 .tier-badge {
@@ -24,7 +24,7 @@
     top: -15px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--accent-neon);
+    background: var(--accent-primary);
     color: var(--bg-dark);
     padding: 5px 15px;
     border-radius: 20px;
@@ -45,15 +45,15 @@
     font-family: var(--font-heading);
     color: var(--text-primary);
     margin-bottom: 20px;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
 }
 
 .register-btn {
     width: 100%;
     padding: 15px;
     background: transparent;
-    border: 1px solid var(--accent-neon);
-    color: var(--accent-neon);
+    border: 1px solid var(--accent-primary);
+    color: var(--accent-primary);
     border-radius: 30px;
     font-weight: 600;
     margin-top: 20px;
@@ -61,9 +61,9 @@
 }
 
 .register-btn:hover {
-    background: var(--accent-neon);
+    background: var(--accent-primary);
     color: var(--bg-dark);
-    box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
 }
 
 .reg-notes {
@@ -93,7 +93,7 @@
     max-width: 500px;
     padding: 40px;
     position: relative;
-    background: #0C0E1D;
+    background: var(--bg-surface);
 }
 
 .close-btn {
@@ -118,8 +118,8 @@
 input {
     width: 100%;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(28, 37, 65, 0.5);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     color: var(--text-primary);
     font-family: var(--font-body);
@@ -128,23 +128,23 @@ input {
 }
 
 input:focus {
-    border-color: var(--accent-neon);
+    border-color: var(--accent-primary);
 }
 
 .submit-btn {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(45deg, var(--color-glow-3-top), var(--color-glow-2-bottom));
-    color: white;
+    background: var(--accent-primary);
+    color: var(--bg-dark);
     border-radius: 30px;
     font-weight: bold;
     font-size: 1.1rem;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .submit-btn:hover {
     transform: scale(1.02);
-    box-shadow: 0 0 30px rgba(255, 129, 255, 0.4);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
 }
 
 .success-message {

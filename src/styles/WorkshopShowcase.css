@@ -8,7 +8,7 @@
     font-size: 3rem;
     margin-bottom: 60px;
     color: var(--text-primary);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 15px rgba(248, 249, 250, 0.1);
 }
 
 .workshop-grid-center {
@@ -49,11 +49,11 @@
     align-items: center;
     justify-content: center;
     padding: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
 }
 
 .flip-card-front {
-    background: rgba(12, 14, 29, 0.6);
+    background: rgba(28, 37, 65, 0.6);
 }
 
 .flip-card-back {
@@ -62,8 +62,9 @@
 
 .workshop-icon-glow {
     margin-bottom: 20px;
-    filter: drop-shadow(0 0 10px currentColor);
+    filter: drop-shadow(0 0 8px currentColor);
     transition: transform 0.3s ease;
+    color: var(--accent-primary);
 }
 
 .flip-card-container:hover .workshop-icon-glow {
@@ -78,9 +79,9 @@
 
 .flip-card-back h3 {
     font-size: 1.3rem;
-    color: var(--text-primary);
+    color: var(--accent-primary);
     margin-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 10px;
     width: 100%;
 }

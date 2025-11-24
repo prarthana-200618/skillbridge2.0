@@ -15,15 +15,15 @@
     margin-bottom: 20px;
     letter-spacing: -2px;
     color: var(--text-primary);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 15px rgba(248, 249, 250, 0.1);
 }
 
 .hero-highlight {
-    background: linear-gradient(45deg, var(--accent-neon), #00d4ff);
+    background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px rgba(0, 243, 255, 0.6);
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
     position: relative;
     display: inline-block;
     animation: pulseGlow 3s infinite alternate;
@@ -31,11 +31,11 @@
 
 @keyframes pulseGlow {
     0% {
-        filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.4));
+        filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
     }
 
     100% {
-        filter: drop-shadow(0 0 25px rgba(0, 243, 255, 0.8));
+        filter: drop-shadow(0 0 18px rgba(212, 175, 55, 0.5));
     }
 }
 
@@ -53,15 +53,14 @@
     gap: 10px;
     font-family: var(--font-body);
     font-size: 1.5rem;
-    color: var(--accent-neon);
-    text-shadow: 0 0 10px var(--accent-neon);
+    color: var(--accent-primary);
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
 }
 
 .hero-buttons {
     display: flex;
     gap: 30px;
     justify-content: center;
-    /* Centered */
 }
 
 .btn-primary {
@@ -72,7 +71,7 @@
     font-weight: 700;
     border-radius: 50px;
     font-size: 1.1rem;
-    border: 2px solid var(--accent-neon);
+    border: 2px solid var(--accent-primary);
     overflow: hidden;
     z-index: 1;
     transition: color 0.3s ease;
@@ -86,14 +85,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--accent-neon);
+    background: var(--accent-primary);
     z-index: -1;
     transition: transform 0.3s ease;
 }
 
 .btn-primary:hover {
-    color: var(--accent-neon);
-    box-shadow: 0 0 30px var(--accent-neon);
+    color: var(--accent-primary);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
 }
 
 .btn-primary:hover::before {
@@ -105,20 +104,20 @@
     padding: 18px 45px;
     background: transparent;
     color: var(--text-primary);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--border-color);
     font-weight: 600;
     border-radius: 50px;
     font-size: 1.1rem;
     transition: all 0.3s ease;
     cursor: pointer;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.05);
 }
 
 .btn-secondary:hover {
-    border-color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    border-color: var(--accent-primary);
+    background: rgba(212, 175, 55, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
 }
 
 @media (max-width: 768px) {

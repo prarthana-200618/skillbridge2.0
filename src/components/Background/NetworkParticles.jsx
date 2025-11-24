@@ -8,7 +8,7 @@ const NetworkParticles = () => {
         const ctx = canvas.getContext('2d');
         let animationFrameId;
         let particles = [];
-        const particleCount = 30;
+        const particleCount = 10;
         let mouse = { x: -1000, y: -1000 };
 
         const resizeCanvas = () => {
@@ -23,11 +23,11 @@ const NetworkParticles = () => {
             constructor(x, y) {
                 this.x = x || Math.random() * canvas.width;
                 this.y = y || Math.random() * canvas.height;
-                this.size = Math.random() * 3 + 1;
-                this.speedX = Math.random() * 3 - 1.5;
-                this.speedY = Math.random() * 3 - 1.5;
-                this.color = '#7d1959'; // Neon magenta
-                this.opacity = Math.random() * 0.5 + 0.5;
+                this.size = Math.random() * 1.5 + 0.5; // Smaller
+                this.speedX = Math.random() * 1.5 - 0.75; // Slower
+                this.speedY = Math.random() * 1.5 - 0.75;
+                this.color = '#D4AF37'; // Classic gold
+                this.opacity = Math.random() * 0.2 + 0.1; // More subtle
             }
 
             update() {

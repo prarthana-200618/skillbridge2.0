@@ -1,76 +1,74 @@
 .organized-section {
-    padding: 80px 20px;
-    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .section-heading {
-    font-size: 3rem;
+    text-align: center;
+    font-size: 2.5rem;
     margin-bottom: 60px;
     color: var(--text-primary);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 15px rgba(248, 249, 250, 0.1);
 }
 
 .organizers-grid-2 {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .organizer-card {
-    padding: 50px;
-    width: 400px;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
     transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
 }
 
 .organizer-card:hover {
-    border-color: var(--color-glow-3-top);
-    box-shadow: 0 0 30px rgba(255, 129, 255, 0.2);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
 }
 
 .organizer-card h3 {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--text-secondary);
+    font-size: 1.5rem;
     margin-bottom: 20px;
-    border-bottom: 1px solid var(--accent-neon);
-    padding-bottom: 10px;
-    width: 100%;
+    color: var(--accent-primary);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
 }
 
 .org-content h4 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--text-primary);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .org-content p {
-    color: var(--text-secondary);
-    margin-bottom: 5px;
     font-family: var(--font-body);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 15px;
 }
 
 .org-link {
     display: inline-block;
-    margin-top: 15px;
-    color: var(--accent-neon);
-    text-decoration: none;
-    font-family: var(--font-body);
-    border: 1px solid var(--accent-neon);
-    padding: 8px 20px;
-    border-radius: 20px;
+    color: var(--accent-primary);
+    font-size: 0.95rem;
+    margin-top: 10px;
     transition: all 0.3s ease;
 }
 
 .org-link:hover {
-    background: var(--accent-neon);
-    color: var(--bg-dark);
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .organizers-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }

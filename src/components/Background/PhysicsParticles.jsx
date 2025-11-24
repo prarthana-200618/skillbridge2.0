@@ -8,7 +8,7 @@ const PhysicsParticles = () => {
         const ctx = canvas.getContext('2d');
         let animationFrameId;
         let particles = [];
-        const particleCount = 40;
+        const particleCount = 15;
         let mouse = { x: -1000, y: -1000 };
 
         const resizeCanvas = () => {
@@ -23,15 +23,15 @@ const PhysicsParticles = () => {
             constructor(x, y, isExplosion = false) {
                 this.x = x || Math.random() * canvas.width;
                 this.y = y || Math.random() * canvas.height;
-                this.size = Math.random() * 3 + 1;
+                this.size = Math.random() * 1.5 + 0.5; // Smaller particles
                 this.baseSize = this.size;
-                this.hue = Math.random() * 80 + 200; // 200-280 (Blue/Purple)
-                this.speedX = Math.random() * 1 - 0.5;
-                this.speedY = Math.random() * 1 - 0.5;
+                this.hue = Math.random() * 30 + 35; // 35-65 (Gold range)
+                this.speedX = Math.random() * 0.5 - 0.25; // Slower movement
+                this.speedY = Math.random() * 0.5 - 0.25;
                 this.life = isExplosion ? 100 : Infinity;
                 this.isExplosion = isExplosion;
-                this.opacity = isExplosion ? 1 : Math.random() * 0.5 + 0.3;
-                this.pulseSpeed = Math.random() * 0.05 + 0.01;
+                this.opacity = isExplosion ? 0.6 : Math.random() * 0.2 + 0.1; // More subtle
+                this.pulseSpeed = Math.random() * 0.02 + 0.005; // Slower pulse
                 this.pulse = 0;
             }
 
